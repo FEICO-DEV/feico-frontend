@@ -1,0 +1,120 @@
+//@import url('https://fonts.googleapis.com/css?family=Sarabun:300,400,700&display=swap');
+//@import 'node_modules/slick-carousel/slick/slick.scss';
+//@import 'node_modules/animate.css/animate.css';
+//@import 'node_modules/aos/dist/aos.css';
+//@import url("https://use.typekit.net/ouw2uil.css");
+@import url('/assets/fonts/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@500&display=swap');
+//@import '../font/stylesheet.css';
+@font-face {
+  font-family: 'Avenir';
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC; 
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC; 
+}
+
+
+$screen-sm: 575px;
+$screen-md: 767px;
+$screen-lg: 991px;
+$screen-xl: 1199px;
+$screen-xxl: 1367px;
+
+$enable-rounded: true;
+
+// Brand colors
+$primary: #00773C;
+$secondary: #96C93E;
+$gray: #4B6176;
+$white: #fff;
+$black: #404040;
+$light: #4D73BE;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "gray": $gray,
+  "white": $white,
+  "black": $black,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px
+);
+
+//$font-family-base: '.', sans-serif;
+$headings-font-family: 'Avenir', 'IBM Plex Sans Thai', sans-serif;
+$font-family-base: 'Avenir', 'IBM Plex Sans Thai', sans-serif;
+
+$font-custom: 'Plus Jakarta Sans', sans-serif;
+
+$body-color: #231f20;
+$headings-color: $primary;
+$card-border-width: 7px;
+
+
+$btn-padding-y: 5px;
+$btn-padding-x: 20px;
+
+$headings-font-weight: 700;
+
+
+$line-height-base: 1.7;
+$headings-line-height: 1.5;
+$progress-height: 4px;
+$gutter-base: 0.5rem;
+$btn-border-radius: 30px;
+$btn-border-radius-lg: 50px;
+$border-radius: 10px;
+
+$lead-font-size: 24px;
+
+$hamburger-layer-color: #fff;
+$vs-border-radius: 10px;
+
+$input-border-radius:     7px;
+
+$h1-font-size:  40px;
+$h2-font-size: 30px;
+$h3-font-size: 20px;
+
+// Then include the following
+@import 'bootstrap/scss/bootstrap.scss';
+//@import 'bootstrap-vue/src/index.scss';
+//@import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+//@import "vue-select/src/scss/vue-select.scss";
+
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong{
+  font-weight: 700;
+}
+
+.font-thin{
+  font-weight: 200;
+}
+
+.font-normal{
+  font-weight: 400;
+}
+
+
+.font-20{
+  font-size: 20px;
+}
+
+.text-underline{
+  text-decoration: underline;
+}
