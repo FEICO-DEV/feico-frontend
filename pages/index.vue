@@ -183,11 +183,107 @@
   <section class="py-5" style="background:#F9F9F9">
     <div class="container">
       <h2 style="color:#000" class="text-center text-lg-start mb-5 mb-lg-0">Our Products</h2>
-      <swiper>
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-    </swiper>
+      <Swiper 
+          :modules="[navigation, pagination]"
+          :slides-per-view="1"
+          :loop="true"
+          :effect="'creative'"
+          :autoplay="{
+            delay: 8000,
+            disableOnInteraction: true,
+          }"
+          :creative-effect="{
+            prev: {
+              shadow: false,
+              translate: ['-20%', 0, -1],
+            },
+            next: {
+              translate: ['100%', 0, 0],
+            },
+        }">
+        <SwiperSlide>
+          <div class="slider">
+        <div class="row mx-4 mx-lg-0">
+          <div class="col-lg-4 mt-4 order-2 order-lg-1">
+            <img src="/hp-slider-01-01.png" class="w-60px mb-4"/>
+            <h2>INVERTER</h2>
+            <p class="me-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2">
+            <div class="img-main">
+              <img src="hp-slider-product.png" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 order-3 order-lg-3">
+            <h2 class="ms-lg-5">SMART ENERGY CONTROLLER <br><span style="color:#808080">SUN2000-3KTL-L1</span></h2>
+            <ul class="list ms-lg-5">
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="slider">
+        <div class="row mx-4 mx-lg-0">
+          <div class="col-lg-4 mt-4 order-2 order-lg-1">
+            <img src="/hp-slider-01-01.png" class="w-60px mb-4"/>
+            <h2>INVERTER</h2>
+            <p class="me-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2">
+            <div class="img-main">
+              <img src="hp-slider-product.png" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 order-3 order-lg-3">
+            <h2 class="ms-lg-5">SMART ENERGY CONTROLLER <br><span style="color:#808080">SUN2000-3KTL-L1</span></h2>
+            <ul class="list ms-lg-5">
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="slider">
+        <div class="row mx-4 mx-lg-0">
+          <div class="col-lg-4 mt-4 order-2 order-lg-1">
+            <img src="/hp-slider-01-01.png" class="w-60px mb-4"/>
+            <h2>INVERTER</h2>
+            <p class="me-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2">
+            <div class="img-main">
+              <img src="hp-slider-product.png" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 order-3 order-lg-3">
+            <h2 class="ms-lg-5">SMART ENERGY CONTROLLER <br><span style="color:#808080">SUN2000-3KTL-L1</span></h2>
+            <ul class="list ms-lg-5">
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Lorem ipsum dolor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        </SwiperSlide>
+        <SwiperControls />
+      </Swiper>
     </div>
   </section>
   <section class="py-5">
