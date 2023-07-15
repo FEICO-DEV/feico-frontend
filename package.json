@@ -19,6 +19,7 @@
     "bootstrap": "^5.3.0",
     "bootstrap3": "^3.3.5",
     "node-sass": "^9.0.0",
+    "nuxt-swiper": "latest",
     "postcss": "^8.4.25",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2"

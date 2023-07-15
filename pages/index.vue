@@ -9,7 +9,7 @@
   <section class="py-5" style="background: #F9F9F9;">
     <div class="container">
       <h2 class="text-center text-uppercase">OUR BUSINESS PARTNER</h2>
-      <div class="logo-wrapper mt-5">
+      <div class="logo-wrapper mt-lg-5 mt-3">
         <img src="/logo-huawei.png" class="img-fluid" />
         <img src="/logo-scg.png" class="img-fluid" />
         <img src="/logo-ais.png" class="img-fluid" />
@@ -24,7 +24,7 @@
   </section>
   <section class="py-5">
     <div class="container">
-      <h2>Product & Service</h2>
+      <h2 class="text-center text-lg-start">Product & Service</h2>
       <div class="hp-2">
         <div class="hp-service">
           <div class="icon">
@@ -153,11 +153,11 @@
   <section class="hp-s3 pt-5">
     <div class="container py-4">
       <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6 px-5 px-lg-0">
           <h2 style="color:#000000">Huawei Digital Power: Your Best Partner for a Better, Greener Future</h2>
-          <p class="mt-5 text-primary">By December 31, 2021<br>Digital Power has helped customers</p>
+          <p class="mt-lg-5 mt-3 mb-5 text-primary">By December 31, 2021<br>Digital Power has helped customers</p>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 px-5 px-lg-0">
           <div class="hp-3-icon">
             <div class="icon">
               <img src="/hp-s3-icon-01.svg" class="img-fluid" />
@@ -182,45 +182,59 @@
   </section>
   <section class="py-5" style="background:#F9F9F9">
     <div class="container">
-      <h2>Our Products</h2>
-      <div class="slider">
-        <div class="row">
-          <div class="col-4">
-            <img src="/hp-slider-01-01.png" />
-            <h2>INVERTER</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
-          </div>
-          <div class="col-4">
-            <div class="img-main">
-              <img src="hp-slider-product.png" class="img-fluid" />
+      <h2 style="color:#000" class="text-center text-lg-start mb-5 mb-lg-0">Our Products</h2>
+      <swiper>
+      <swiper-slide>Slide 1</swiper-slide>
+      <swiper-slide>Slide 2</swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+    </swiper>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container">
+      <div class="row mx-4 ,x-lg-0">
+        <div class="col-lg-4">
+          <h2 class="text-black">Solar Calculator</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+        </div>
+        <div class="col-lg-8">
+          <div class="row ps-lg-5">
+            <div class="col-6">
+              <h6 class="font-thin" style="color: #808080;">ค่าไฟฟ้าเฉลี่ยต่อเดือน</h6>
+              <input class="form-control" type="text" />
+              <div class="gr-glow my-4">
+                <input id="gradient-range" class="gr-input w-100" type="range" value="50" min="0" max="100">
+              </div>
+            </div>
+            <div class="col-6">
+              <h6 class="font-thin" style="color: #808080;">เปอร์เซ็นการใช้ไฟฟ้าช่วงกลางวัน</h6>
+              <input class="form-control" type="text" />
+              <div class="gr-glow my-4">
+                <input id="gradient-range" class="gr-input w-100" type="range" value="50" min="0" max="100">
+              </div>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-primary">Calculate</button>
             </div>
           </div>
-          <div class="col-4">
-            <h2>SMART ENERGY CONTROLLER SUN2000-3KTL-L1</h2>
-            <ul class="list">
-              <li>Lorem ipsum dolor</li>
-              <li>Lorem ipsum dolor</li>
-              <li>Lorem ipsum dolor</li>
-              <li>Lorem ipsum dolor</li>
-              <li>Lorem ipsum dolor</li>
-              <li>Lorem ipsum dolor</li>
-            </ul>
-          </div>
+          
         </div>
       </div>
     </div>
   </section>
+  <Footer />
 </template>
 
 <script>
 import { defineComponent } from '@vue/composition-api'
-
+// more module style...
 export default defineComponent({
   data() {
     return {
       width: '50',
     };
   },
+
   mounted() {
     console.log( this.width )
   },
@@ -262,6 +276,7 @@ export default defineComponent({
 .hp-2{
   display: flex;
   margin: 0 -15px;
+  flex-wrap: wrap;
   > *{
     margin-left: 15px;
     margin-right: 15px;
@@ -271,6 +286,10 @@ export default defineComponent({
 
 .hp-service{
   margin-top: 30px;
+  @media (max-width: 768px) {
+    margin: 30px 45px;
+    text-align: center;
+  }
   &:hover, &:active, &:focus{
       .icon{
         background-color:#F9F9F9;
@@ -307,6 +326,10 @@ export default defineComponent({
     justify-content: center;
     margin-bottom: 15px;
     transition: background-color .5s;
+    @media (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
     svg{
       max-width: 100%;
     }
@@ -376,5 +399,211 @@ export default defineComponent({
     justify-content: center;
     padding: 60px;
   }
+  .w-60px{
+    width: 60px;
+  }
+  h2{
+    color: #999999;
+  }
+  p{
+    color: #999;
+  }
+  .list{
+    list-style: none;
+    padding: 0;
+    color: #999999;
+    margin-botoom: 0;
+    li{
+      padding: 5px 0;
+    }
+    li + li{
+      border-top: 1px solid #B3B3B3;
+    }
+  }
 }
+/* === range theme and appearance === */
+input[type="range"] {
+	font-size: 1.5rem;
+	width: 12.5em;
+}
+
+input[type="range"] {
+	color: #00773C;
+	--thumb-height: 20px;
+	--track-height: 5px;
+	--track-color: #CCCCCC;
+	--brightness-hover: 180%;
+	--brightness-down: 80%;
+	--clip-edges: 0.125em;
+}
+
+input[type="range"].win10-thumb {
+	color: #2b2d42;
+
+	--thumb-height: 1.375em;
+	--thumb-width: 0.5em;
+	--clip-edges: 0.0125em;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: #000;
+	}
+
+	html::before {
+		background: radial-gradient(circle at center, #101112, #000);
+	}
+
+	input[type="range"] {
+		color: #f07167;
+		--track-color: rgba(255, 255, 255, 0.1);
+	}
+
+	input[type="range"].win10-thumb {
+		color: #3a86ff;
+	}
+}
+
+/* === range commons === */
+input[type="range"] {
+	position: relative;
+	background: #fff0;
+	overflow: hidden;
+}
+
+input[type="range"]:active {
+	cursor: grabbing;
+}
+
+input[type="range"]:disabled {
+	filter: grayscale(1);
+	opacity: 0.3;
+	cursor: not-allowed;
+}
+
+/* === WebKit specific styles === */
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	transition: all ease 100ms;
+	height: var(--thumb-height);
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+	position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	--thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+	--clip-further: calc(100% + 1px);
+	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+		100vmax currentColor;
+
+	width: var(--thumb-width, var(--thumb-height));
+	background: linear-gradient(currentColor 0 0) scroll no-repeat left center /
+		50% calc(var(--track-height) + 1px);
+	background-color: currentColor;
+	box-shadow: var(--box-fill);
+	border-radius: var(--thumb-width, var(--thumb-height));
+
+	filter: brightness(100%);
+	clip-path: polygon(
+		100% -1px,
+		var(--clip-edges) -1px,
+		0 var(--clip-top),
+		-100vmax var(--clip-top),
+		-100vmax var(--clip-bottom),
+		0 var(--clip-bottom),
+		var(--clip-edges) 100%,
+		var(--clip-further) var(--clip-further)
+	);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+	filter: brightness(var(--brightness-hover));
+	cursor: grab;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+	filter: brightness(var(--brightness-down));
+	cursor: grabbing;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /
+		100% calc(var(--track-height) + 1px);
+}
+
+input[type="range"]:disabled::-webkit-slider-thumb {
+	cursor: not-allowed;
+}
+
+/* === Firefox specific styles === */
+input[type="range"],
+input[type="range"]::-moz-range-track,
+input[type="range"]::-moz-range-thumb {
+	appearance: none;
+	transition: all ease 100ms;
+	height: var(--thumb-height);
+}
+
+input[type="range"]::-moz-range-track,
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-moz-range-progress {
+	background: #fff0;
+}
+
+input[type="range"]::-moz-range-thumb {
+	background: currentColor;
+	border: 0;
+	width: var(--thumb-width, var(--thumb-height));
+	border-radius: var(--thumb-width, var(--thumb-height));
+	cursor: grab;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+	cursor: grabbing;
+}
+
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	background: var(--track-color);
+}
+
+input[type="range"]::-moz-range-progress {
+	appearance: none;
+	background: transparent linear-gradient(90deg, #D6DE25 0%, #96C93E 36%, #00773C 100%) 0% 0% no-repeat padding-box;
+	transition-delay: 30ms;
+}
+
+input[type="range"]::-moz-range-track,
+input[type="range"]::-moz-range-progress {
+	height: calc(var(--track-height) + 1px);
+	border-radius: var(--track-height);
+}
+
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-moz-range-progress {
+	filter: brightness(100%);
+}
+
+input[type="range"]:hover::-moz-range-thumb,
+input[type="range"]:hover::-moz-range-progress {
+	filter: brightness(var(--brightness-hover));
+}
+
+input[type="range"]:active::-moz-range-thumb,
+input[type="range"]:active::-moz-range-progress {
+	filter: brightness(var(--brightness-down));
+}
+
+input[type="range"]:disabled::-moz-range-thumb {
+	cursor: not-allowed;
+}
+
+
 </style>

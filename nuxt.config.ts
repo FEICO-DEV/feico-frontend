@@ -1,9 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtModule } from 'nuxt'
+
 export default defineNuxtConfig({
-  modules: [
-    // ...
-    
-  ],
+  modules: ['nuxt-swiper'],
   css: [
     '@/assets/css/main.scss',
   ],
@@ -12,5 +11,6 @@ export default defineNuxtConfig({
         link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     }
   },
+  
   
 })

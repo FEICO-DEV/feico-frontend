@@ -3,11 +3,12 @@
 //@import 'node_modules/animate.css/animate.css';
 //@import 'node_modules/aos/dist/aos.css';
 //@import url("https://use.typekit.net/ouw2uil.css");
-@import url('/assets/fonts/stylesheet.css');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@500&display=swap');
+//@import url('/assets/fonts/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&display=swap');
 //@import '../font/stylesheet.css';
 @font-face {
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC; 
 }
 
@@ -30,7 +31,7 @@ $primary: #00773C;
 $secondary: #96C93E;
 $gray: #4B6176;
 $white: #fff;
-$black: #404040;
+$black: #000;
 $light: #4D73BE;
 
 $theme-colors: (
@@ -49,12 +50,12 @@ $container-max-widths: (
 );
 
 //$font-family-base: '.', sans-serif;
-$headings-font-family: 'Avenir', 'IBM Plex Sans Thai', sans-serif;
-$font-family-base: 'Avenir', 'IBM Plex Sans Thai', sans-serif;
+$headings-font-family: 'Nunito', 'IBM Plex Sans Thai', sans-serif;
+$font-family-base: 'Nunito', 'IBM Plex Sans Thai', sans-serif;
 
 $font-custom: 'Plus Jakarta Sans', sans-serif;
 
-$body-color: #231f20;
+$body-color: #999999;
 $headings-color: $primary;
 $card-border-width: 7px;
 
@@ -78,7 +79,7 @@ $lead-font-size: 24px;
 $hamburger-layer-color: #fff;
 $vs-border-radius: 10px;
 
-$input-border-radius:     7px;
+$input-border-radius:     50px;
 
 $h1-font-size:  40px;
 $h2-font-size: 30px;

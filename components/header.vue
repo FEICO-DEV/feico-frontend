@@ -4,7 +4,7 @@
       <div class="logo">
         <a><img src="/logo.jpg" class="img-fluid" /></a>
       </div>
-      <div class="main-nav">
+      <div class="main-nav d-none d-lg-block">
         <nav>
           <a href="#">ABOUT US</a>
           <a href="#">PRODUCTS</a>
