@@ -2,6 +2,10 @@
   <Header />
   <section class="hp-banner">
     <img src="/hp-banner.jpg" class="img-fluid w-100" />
+    <div class="text">
+      <h1>Your<br><strong>green energy</strong><br></h1>
+      <h1 class="text-end">partner</h1>
+    </div>
     <h2 class="text-white">FEICO is Huawei’s partner<br>
     in Thailand since 1999
     </h2>
@@ -384,6 +388,28 @@ export default defineComponent({
     left: 15px;
     bottom: 15px;
     width: 50%;
+    @media (max-width: 992px) {
+        font-size: 12px;
+      }
+  }
+  .text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    left: 0;
+    top: 0;
+    h1{
+      color: #fff;
+      font-size: 8em;
+      text-transform: uppercase;
+      line-height: 1;
+      font-weight: 300;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      @media (max-width: 992px) {
+        font-size: 40px;
+      }
+    }
   }
 }
 
