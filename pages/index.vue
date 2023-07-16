@@ -180,14 +180,16 @@
       </div>
     </div>
   </section>
-  <section class="py-5" style="background:#F9F9F9">
+  <section class="py-5 hp-slider" style="background:#F9F9F9">
     <div class="container">
       <h2 style="color:#000" class="text-center text-lg-start mb-5 mb-lg-0">Our Products</h2>
-      <Swiper 
-          :modules="[navigation, pagination]"
+      <swiper 
+          ref="mySwiper"
+          :modules="modules"
           :slides-per-view="1"
           :loop="true"
           :effect="'creative'"
+          :pagination="{ clickable: true }"
           :autoplay="{
             delay: 8000,
             disableOnInteraction: true,
@@ -201,7 +203,7 @@
               translate: ['100%', 0, 0],
             },
         }">
-        <SwiperSlide>
+        <swiper-slide>
           <div class="slider">
         <div class="row mx-4 mx-lg-0">
           <div class="col-lg-4 mt-4 order-2 order-lg-1">
@@ -227,8 +229,8 @@
           </div>
         </div>
       </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </swiper-slide>
+        <swiper-slide>
           <div class="slider">
         <div class="row mx-4 mx-lg-0">
           <div class="col-lg-4 mt-4 order-2 order-lg-1">
@@ -254,8 +256,8 @@
           </div>
         </div>
       </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </swiper-slide>
+        <swiper-slide>
           <div class="slider">
         <div class="row mx-4 mx-lg-0">
           <div class="col-lg-4 mt-4 order-2 order-lg-1">
@@ -281,9 +283,15 @@
           </div>
         </div>
       </div>
-        </SwiperSlide>
-        <SwiperControls />
-      </Swiper>
+        </swiper-slide>
+       
+      </swiper>
+      <button @click="nextSlide" class="btn-slider-next">
+        <img src="/slider-next.png" class="img-fluid" />
+      </button>
+      <button @click="prevSlide" class="btn-slider-prev">
+        <img src="/slider-prev.png" class="img-fluid" />
+      </button>
     </div>
   </section>
   <section class="py-5">
@@ -323,6 +331,15 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
+
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { useSwiper } from 'swiper/vue'
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 // more module style...
 export default defineComponent({
   data() {
@@ -330,13 +347,30 @@ export default defineComponent({
       width: '50',
     };
   },
-
+  components: {
+      Swiper,
+      SwiperSlide,
+    },
+  setup() {
+    const swiper = useSwiper()
+    
+    return {
+        modules: [Navigation, Pagination, Scrollbar, A11y],
+        swiper,
+      };
+  },
   mounted() {
     console.log( this.width )
   },
   methods: {
     getWidth( submenuWidth) {
       this.width = submenuWidth
+    },
+    nextSlide(){
+      this.$refs.mySwiper.$el.swiper.slideNext()
+    },
+    prevSlide(){
+      this.$refs.mySwiper.$el.swiper.slidePrev()
     },
   },
 })
@@ -484,6 +518,47 @@ export default defineComponent({
   }
 }
 
+.hp-slider{
+  position: relative;
+  @media (max-width: 1100px) {
+    overflow: hidden;
+  }
+}
+
+.btn-slider-next,
+.btn-slider-prev{
+  background: transparent;
+  border: 0;
+  position: absolute;
+  z-index: 88;
+  img{
+    height: 80px;
+    width: 100px;
+    object-fit: contain;
+  }
+  @media (max-width: 1100px) {
+    display: none;
+  }
+}
+
+.btn-slider-prev{
+  background: #B3B3B3;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0 50% 50% 0;
+  padding: 50px 25px 50px 50px;
+}
+
+.btn-slider-next{
+  background: #B3B3B3;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50% 0 0 50%;
+  padding: 50px 50px 50px 25px;
+}
+
 .slider{
   .img-main{
     background: #B3B3B3;
@@ -584,6 +659,11 @@ input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	transition: all ease 100ms;
 	height: var(--thumb-height);
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+  background: transparent linear-gradient(90deg, #D6DE25 0%, #96C93E 36%, #00773C 100%) 0% 0% no-repeat padding-box;
+	
 }
 
 input[type="range"]::-webkit-slider-runnable-track,

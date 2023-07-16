@@ -119,3 +119,20 @@ strong{
 .text-underline{
   text-decoration: underline;
 }
+
+.swiper-pagination{
+  .swiper-pagination-bullet{
+    background: #00773C;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background: #96C93E;
+    transform: scale(1.5);
+  }
+}
+
+@media (max-width: 992px) {
+  .swiper{
+    padding-bottom: 50px !important;
+  }
+}

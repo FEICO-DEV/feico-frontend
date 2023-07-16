@@ -1,8 +1,8 @@
 <template>
     <footer class="py-5 main-footer">
         <div class="container mt-5">
-          <div class="row">
-            <div class="col-6">
+          <div class="row mx-3 mx-lg-0">
+            <div class="col-lg-6">
               <div class="row">
                 <div class="col-4">
                   <img src="/logo-white.png" class="img-fluid" />
@@ -13,10 +13,10 @@
               </div>
             </div>
           </div>
-          <div class="row mt-5">
-            <div class="col-6">
+          <div class="row mt-5 mx-3 mx-lg-0">
+            <div class="col-lg-6">
               <div class="row">
-                <div class="col-4">
+                <div class="col-lg-4 col-6">
                   <ul class="nav">
                     <li><a href="">About Us</a></li>
                     <li>
@@ -31,7 +31,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-6">
                   <ul class="nav">
                     <li><a href="">Our Products</a></li>
                     <ul>
@@ -44,7 +44,7 @@
                       </ul>
                   </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 mt-3 mt-lg-0">
                   <ul class="nav">
                     <li><a href="">ผลงานของเรา</a></li>
                     <li><a href="">Articles & News</a></li>
@@ -56,15 +56,15 @@
               </div>
 
             </div>
-            <div class="col-5 offset-1">
+            <div class="col-lg-5 offset-lg-1 mt-3 mt-lg-0">
               <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="icon-text">
                     <img src="/icon-phone.svg" />
                     <span>093-168-8888</span>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 ">
                   <div class="icon-text">
                     <img src="/icon-globe.svg" />
                     <span>feico.co.th</span>
@@ -76,19 +76,19 @@
                     <span>feico</span>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="icon-text">
                     <img src="/icon-envelope.svg" />
                     <span>feico@feico.co.th</span>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="icon-text">
                     <img src="/icon-line.svg" />
                     <span>@feico</span>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lf-6">
                   <div class="icon-text">
                     <img src="/icon-pin.svg" />
                     <span>3683 Soi Yothinpattana 11 Yak 7, Klongchan, Bangkapi, Bangkok, 10240, Thailand</span>
@@ -101,7 +101,7 @@
           </div>
 
 
-          <div class="d-lg-flex justify-content-between align-items-center mt-5">
+          <div class="d-lg-flex justify-content-between align-items-center mt-5 mx-4 mx-lg-0">
             <p class="text-white text-xs m-0">Copyright © 2023 First Engineering International Co., Ltd.</p>
             <div class="bottom-links">
               <a href="#" class="text-white text-xs">Privacy Policy</a>
