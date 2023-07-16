@@ -213,7 +213,7 @@
           </div>
           <div class="col-lg-4 order-1 order-lg-2">
             <div class="img-main">
-              <img src="hp-slider-product.png" class="img-fluid" />
+              <img src="/hp-slider-product.png" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-4 order-3 order-lg-3">
@@ -240,7 +240,7 @@
           </div>
           <div class="col-lg-4 order-1 order-lg-2">
             <div class="img-main">
-              <img src="hp-slider-product.png" class="img-fluid" />
+              <img src="/hp-slider-product.png" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-4 order-3 order-lg-3">
@@ -267,7 +267,7 @@
           </div>
           <div class="col-lg-4 order-1 order-lg-2">
             <div class="img-main">
-              <img src="hp-slider-product.png" class="img-fluid" />
+              <img src="/hp-slider-product.png" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-4 order-3 order-lg-3">
