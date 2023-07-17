@@ -1,7 +1,7 @@
 <template>
   <Header />
-  <section class="hp-banner">
-    <img src="/hp-banner.jpg" class="img-fluid w-100" />
+  <div style="padding:56.25% 0 0 0;position:relative;" class="hp-banner">
+    <iframe src="https://player.vimeo.com/video/845783533?background=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
     <div class="text">
       <h1>Your<br><strong>green energy</strong><br></h1>
       <h1 class="text-end">partner</h1>
@@ -9,7 +9,7 @@
     <h2 class="text-white">FEICO is Huawei’s partner<br>
     in Thailand since 1999
     </h2>
-  </section>
+  </div>
   <section class="py-5" style="background: #F9F9F9;">
     <div class="container">
       <h2 class="text-center text-uppercase">OUR BUSINESS PARTNER</h2>
