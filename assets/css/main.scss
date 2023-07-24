@@ -30,7 +30,7 @@ $enable-rounded: true;
 // Brand colors
 $primary: #00773C;
 $secondary: #96C93E;
-$gray: #4B6176;
+$gray: #666;
 $white: #fff;
 $black: #000;
 $light: #4D73BE;
@@ -112,6 +112,10 @@ strong{
   font-weight: 400;
 }
 
+.font-24{
+  font-size: 24px;
+}
+
 
 .font-20{
   font-size: 20px;
@@ -136,4 +140,10 @@ strong{
   .swiper{
     padding-bottom: 50px !important;
   }
+}
+
+.btn-gradient{
+  background: transparent linear-gradient(90deg, #D6DE25 0%, #96C93E 36%, #00773C 100%) 0% 0% no-repeat padding-box;
+  border: 0;
+  color: #fff;
 }
