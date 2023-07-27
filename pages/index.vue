@@ -405,6 +405,12 @@ export default defineComponent({
       transform: translate(-50%,-50%);
       max-width: 1120px;
     }
+    @media (max-width: 992px) {
+      left: 50%;
+      top: 75%;
+      transform: translate(-50%,-50%);
+      max-width: 500px;
+    }
     h1{
       color: #fff;
       font-size: 8em;
