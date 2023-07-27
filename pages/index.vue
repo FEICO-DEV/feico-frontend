@@ -399,6 +399,12 @@ export default defineComponent({
     padding: 35px;
     left: 0;
     top: 0;
+    @media (min-width: 1400px) {
+      left: 50%;
+      top: 75%;
+      transform: translate(-50%,-50%);
+      max-width: 1120px;
+    }
     h1{
       color: #fff;
       font-size: 8em;
