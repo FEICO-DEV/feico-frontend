@@ -86,7 +86,7 @@
   
   <script>
   import { defineComponent } from '@vue/composition-api'
-  import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
+  import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules'
 
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { useSwiper } from 'swiper/vue'
@@ -95,6 +95,7 @@
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
   import 'swiper/css/scrollbar';
+  
   // more module style...
   export default defineComponent({
     data() {
@@ -114,7 +115,7 @@
       const swiper = useSwiper()
       
       return {
-          modules: [Navigation, Pagination, Scrollbar, A11y],
+          modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
           swiper,
         };
     },
