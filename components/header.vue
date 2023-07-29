@@ -105,6 +105,7 @@
           </div>
           <nuxt-link to="/Service">SERVICES</nuxt-link>
           <a href="#">SOLAR BUSINESS ENABLER </a>
+          <nuxt-link to="/news">PRESS</nuxt-link>
         </nav>
       </div>
       <div class="d-flex align-items-center">
