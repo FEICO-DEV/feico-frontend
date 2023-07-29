@@ -2,13 +2,108 @@
   <header class="main-header">
     <div class="wrapper">
       <div class="logo">
-        <a><img src="/logo.jpg" class="img-fluid" /></a>
+        <nuxt-link to="/"><img src="/logo.jpg" class="img-fluid" /></nuxt-link>
       </div>
       <div class="main-nav d-none d-lg-block">
         <nav>
-          <a href="#">ABOUT US</a>
-          <a href="#">PRODUCTS</a>
-          <a href="#">SERVICES</a>
+          <nuxt-link to="/about">ABOUT US</nuxt-link>
+          <div class="parent-nav" ref="menu">
+            <div class="d-flex align-items-center">
+              <nuxt-link to="/Product" class="pe-0 me-1">
+                PRODUCTS
+              </nuxt-link>
+              <button class="btn-click" @click="toggleNav">
+                <svg  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="123.959px" height="123.958px" viewBox="0 0 123.959 123.958" style="enable-background:new 0 0 123.959 123.958;"
+                  xml:space="preserve">
+                <g>
+                  <path d="M117.979,28.017h-112c-5.3,0-8,6.4-4.2,10.2l56,56c2.3,2.3,6.1,2.3,8.401,0l56-56
+                    C125.979,34.417,123.279,28.017,117.979,28.017z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+              </button>
+            </div>
+            <div class="child-nav" v-if="isHovered" :style="`left: ${left}px;`">
+              <div class="child-wrapper">
+                <div class="list">
+                  <h3><strong>Inverters</strong></h3>
+                  <ul>
+                    <li>
+                      <a href="">Residental</a>
+                    </li>
+                    <li>
+                      <a href="">C&I</a>
+                    </li>
+                    <li>
+                      <a href="">Utilities</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list">
+                  <h3><strong>Energy Storyage Products</strong></h3>
+                  <ul>
+                    <li>
+                      <a href="">Residental</a>
+                    </li>
+                    <li>
+                      <a href="">C&I</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list">
+                  <h3><strong>System Accessories</strong></h3>
+                </div>
+                <div class="list">
+                  <h3><strong>Optimizers</strong></h3>
+                </div>
+                <div class="list">
+                  <h3><strong>EV Charger</strong></h3>
+                  <ul>
+                    <li>
+                      <a href="">AC</a>
+                    </li>
+                    <li>
+                      <a href="">DC</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list">
+                  <h3><strong>Solar PVB Modules</strong></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nuxt-link to="/Service">SERVICES</nuxt-link>
           <a href="#">SOLAR BUSINESS ENABLER </a>
         </nav>
       </div>
@@ -27,6 +122,47 @@
   </header>
 </template>
 
+<script>
+import { defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
+  data() {
+    return {
+      isHovered: false,
+      left: '0',
+    }
+      
+  },
+  mounted() {
+    this.calculateLeft()
+  },
+
+  methods: {
+    handleMouseOver() {
+      this.isHovered = true;
+    },
+    handleMouseOut() {
+      this.isHovered = false;
+    },
+    calculateLeft(){
+      const boxElement = this.$refs.menu;
+      const rect = null
+      if (boxElement && boxElement instanceof HTMLElement) {
+          // Get the position of the element using getBoundingClientRect()
+          const rect = boxElement.offsetLeft
+          this.left = rect;
+      }
+      console.log( this.$refs.menu.offsetLeft )
+    },
+    toggleNav(){
+      this.isHovered = !this.isHovered
+      this.calculateLeft()
+    }
+  },
+})
+</script>
+
+
 <style lang="scss" scoped>
 .main-header{
   padding: 15px 0;
@@ -37,6 +173,11 @@
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
+  }
+
+  .btn-click{
+    border: 0;
+    background: transparent;
   }
 
   .logo{
@@ -194,5 +335,64 @@
 
 #button-3 .checkbox:checked ~ .layer {
   background-color: #fcebeb;
+}
+
+.parent-nav{
+  svg{
+    width: 10px;
+    height: 15px;
+  }
+}
+
+.main-header{
+  position: relative;
+}
+
+.child-nav{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #0E523D;
+  z-index: 8;
+  border-radius: 0 0 20px 20px;
+  width: auto;
+  h3{
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  li {
+    &:before{
+      content: '-';
+    }
+    a{
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  .child-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: relative;
+    padding: 30px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 12px;
+      background: transparent linear-gradient(90deg, #D6DE25 0%, #96C93E 36%, #00773C 100%) 0% 0% no-repeat padding-box;
+      top: 0;
+    }
+    > *{
+      flex: 0 30%;
+    }
+  }
 }
 </style>
