@@ -6,8 +6,7 @@
       <h1>Your<br><strong>green energy</strong><br></h1>
       <h1 class="text-end">partner</h1>
     </div>
-    <h2 class="text-white">FEICO is Huawei’s partner<br>
-    in Thailand since 1999
+    <h2 class="text-white">FEICO is Huawei’s partner in Thailand since 1999
     </h2>
   </div>
   <section class="py-5" style="background: #F9F9F9;">
