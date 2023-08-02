@@ -56,6 +56,14 @@
           </div>
           <p>We have confidence and belief in a culture of mutual trust and respect that would benefit to all.</p>
         </div>
+        <div class="item">
+          <img src="/path-5.jpg" class="img-fluid" />
+          <div class="year">
+            <h3 class="mb-0"><strong>2022</strong></h3>
+            <p class="small"><strong>CUSTOMER FOCUS</strong></p>
+          </div>
+          <p>We have confidence and belief in a culture of mutual trust and respect that would benefit to all.</p>
+        </div>
       </div>
       <div class="banner-2">
         <div class="row">
