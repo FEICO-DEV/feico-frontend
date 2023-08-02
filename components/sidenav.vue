@@ -4,15 +4,14 @@
       <div class="top">
         <img src="/logo-white.png" class="img-fluid" />
         <nav class="mt-lg-5 mt-4">
-          <h2 class="text-white">ABOUT US</h2>
-          <h2 class="text-white">PRODUCT</h2>
-          <h2 class="text-white">SERVICES</h2>
+          <nuxt-link :to="localePath('about')"><h2 class="text-white">{{ $t('nav.aboutus') }}</h2></nuxt-link>
+          <nuxt-link :to="localePath('Product')"><h2 class="text-white">{{ $t('nav.product') }}</h2></nuxt-link>
+          <nuxt-link :to="localePath('Service')"><h2 class="text-white">{{ $t('nav.service') }}</h2></nuxt-link>
           <h2 class="text-white">SOLAR BUSINESS</h2>
-          <h2 class="text-white">PRESS</h2>
-          <h2 class="text-white">CONTACT US</h2>
-          <h2 class="text-white">CAREER</h2>
+          <nuxt-link :to="localePath('News')"><h2 class="text-white">{{ $t('nav.press') }}</h2></nuxt-link>
+          <nuxt-link :to="localePath('contact')"><h2 class="text-white">CONTACT US</h2></nuxt-link>
+          <nuxt-link :to="localePath('career')"><h2 class="text-white">CAREER</h2></nuxt-link>
           <h2 class="text-white">FREE SITE SURVEY</h2>
-        </nav>
       </div>
     </div>
   </nav>
