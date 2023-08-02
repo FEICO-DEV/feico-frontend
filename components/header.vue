@@ -2,15 +2,15 @@
   <header class="main-header">
     <div class="wrapper">
       <div class="logo">
-        <nuxt-link to="/"><img src="/logo.jpg" class="img-fluid" /></nuxt-link>
+        <nuxt-link :to="localePath('/')"><img src="/logo.jpg" class="img-fluid" /></nuxt-link>
       </div>
       <div class="main-nav d-none d-lg-block">
         <nav>
-          <nuxt-link to="/about">ABOUT US</nuxt-link>
+          <nuxt-link :to="localePath('about')">{{ $t('nav.aboutus') }}</nuxt-link>
           <div class="parent-nav" ref="menu">
             <div class="d-flex align-items-center">
-              <nuxt-link to="/Product" class="pe-0 me-1">
-                PRODUCTS
+              <nuxt-link :to="localePath('Product')" class="pe-0 me-1">
+                {{ $t('nav.product') }}
               </nuxt-link>
               <button class="btn-click" @click="toggleNav">
                 <svg  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -103,15 +103,16 @@
               </div>
             </div>
           </div>
-          <nuxt-link to="/Service">SERVICES</nuxt-link>
+          <nuxt-link :to="localePath('Service')">{{ $t('nav.service') }}</nuxt-link>
           <a href="#">SOLAR BUSINESS ENABLER </a>
+          <nuxt-link :to="localePath('News')">{{ $t('nav.press') }}</nuxt-link>
         </nav>
       </div>
       <div class="d-flex align-items-center">
         <img src="/icon-search.svg" class="img-fluid search" />
         <div class="toggle-button-cover">
           <div id="button-3" class="button r">
-            <input class="checkbox" type="checkbox">
+            <input class="checkbox" type="checkbox" v-model="isChecked" @change="handleCheckboxChange">
             <div class="knobs"></div>
             <div class="layer"></div>
           </div>
@@ -133,6 +134,7 @@ export default defineComponent({
     return {
       isHovered: false,
       left: '0',
+      isChecked: this.$i18n.locale=='en' ? true : false
       isOpen: false,
     }
       
@@ -142,6 +144,14 @@ export default defineComponent({
   },
 
   methods: {
+    handleCheckboxChange() {
+      if (this.isChecked) {
+        this.$i18n.setLocale('en');
+      } else {
+        this.$i18n.setLocale('th');
+      }
+
+    },
     handleMouseOver() {
       this.isHovered = true;
     },

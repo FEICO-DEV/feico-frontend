@@ -2,12 +2,12 @@
     <footer class="py-5 main-footer">
         <div class="container mt-5">
           <div class="row mx-3 mx-lg-0">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <div class="row">
-                <div class="col-4">
+                <div class="col-2">
                   <img src="/logo-white.png" class="img-fluid" />
                 </div>
-                <div class="col-8">
+                <div class="col-10">
                   <p class="text-white">We are leading solar cell solution provider distributing world standardequipments and official distributor of world's leading electric vehicle charger brands.</p>
                 </div>
               </div>
