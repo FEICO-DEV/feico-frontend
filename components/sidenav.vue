@@ -12,6 +12,7 @@
           <nuxt-link :to="localePath('contact')"><h2 class="text-white">CONTACT US</h2></nuxt-link>
           <nuxt-link :to="localePath('career')"><h2 class="text-white">CAREER</h2></nuxt-link>
           <h2 class="text-white">FREE SITE SURVEY</h2>
+        </nav>
       </div>
     </div>
   </nav>
