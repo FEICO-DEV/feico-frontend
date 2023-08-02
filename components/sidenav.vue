@@ -45,19 +45,6 @@
         </div>
       </div>
     </div>
-    <div class="main" ref="submenu">
-      <a class="menu-button" @click="toggleMenu">
-        <img src="/icon-plus.png" class="img-fluid" />
-      </a>
-      <div class="links">
-        <a href="https://www.facebook.com/FN.Factory.Outlet" class="icon-facebook">
-          <img src="/icon-facebook.png" class="img-fluid" />
-        </a>
-        <a href="https://www.instagram.com/fnoutlet/" class="mt-2 d-block">
-          <img src="/icon-ig.png" class="img-fluid" />
-        </a>
-      </div>
-    </div>
   </nav>
 </template>
 
@@ -65,27 +52,34 @@
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
+  props: {
+    isShow: {
+      type: Boolean,
+    },
+  },
   data() {
     return {
-      width: '0',
       isOpen: false,
+      loading: true,
     };
   },
-  mounted() {
-    this.width = this.$refs.menu.offsetWidth
-    console.log(this.$refs.submenu.offsetWidth)
-    this.$emit('submenuWidth', this.$refs.submenu.offsetWidth)
-  },
-  methods: {
-    toggleMenu(){
-      this.isOpen = !this.isOpen
-      if( this.isOpen ){
-        this.width = 0
-      } else {
-        this.width = this.$refs.menu.offsetWidth
+  computed: {
+    width() {
+      // This computed property calculates a value based on the originalValue
+      if( this.isShow ){
+        return 0
+      } else{
+        return this.$refs.menu.offsetWidth
       }
-    }
-  }
+      
+    },
+  },
+  mounted() {
+    //this.width = this.$refs.menu.offsetWidth
+    //console.log(this.$refs.submenu.offsetWidth)
+    //this.$emit('submenuWidth', this.$refs.submenu.offsetWidth)
+    //this.loading = false
+  },
 
 })
 </script>

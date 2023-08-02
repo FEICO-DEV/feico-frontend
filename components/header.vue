@@ -116,20 +116,24 @@
             <div class="layer"></div>
           </div>
         </div> 
-        <img src="/menu.jpg" class="img-fluid menu" />
+        <img src="/menu.jpg" class="img-fluid menu" @click="isOpen=!isOpen"/>
       </div>
     </div>
+    <sidenav ref="sidenav" @submenuWidth="getWidth" :isShow="isOpen"/>
   </header>
 </template>
 
 <script>
 import { defineComponent } from '@vue/composition-api'
+import sidenav from './sidenav.vue';
 
 export default defineComponent({
+  components: { sidenav },
   data() {
     return {
       isHovered: false,
       left: '0',
+      isOpen: false,
     }
       
   },
@@ -157,6 +161,9 @@ export default defineComponent({
     toggleNav(){
       this.isHovered = !this.isHovered
       this.calculateLeft()
+    },
+    toggleMenu(){
+      this.isOpen = !this.isOpen
     }
   },
 })
