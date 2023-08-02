@@ -1,48 +1,18 @@
 <template>
-  <nav class="bg-primary side-nav" :style="`left: -${width}px;`">
-    <div class="hidden-menu" ref="menu">
+  <nav class="bg-primary side-nav" ref="submenu" :style="`left: -${width}px;`" v-if="!loading">
+    <div class="hidden-menu" >
       <div class="top">
         <img src="/logo-white.png" class="img-fluid" />
         <nav class="mt-lg-5 mt-4">
           <h2 class="text-white">ABOUT US</h2>
-          <div class="ms-lg-5 my-lg-5 my-4">
-            <div class="row">
-              <a href="#" class="col-6 text-white">นักลงทุนสัมพันธ์</a>
-            </div>
-            <div class="row">
-              <a href="#" class="col-6 text-white">ประวัติความเป็นมา</a>
-              <a href="#" class="col-6 text-white">การกำกับดูแลกิจการที่ดี</a>
-            </div>
-            <div class="row">
-              <a href="#" class="col-6 text-white">โครงสร้างธุรกิจ</a>
-              <a href="#" class="col-6 text-white">ห้องข่าว</a>
-            </div>
-            <div class="row">
-              <a href="#" class="col-6 text-white">ข้อมูลทางการเงิน</a>
-              <a href="#" class="col-6 text-white">เอกสารเผยแพร่</a>
-            </div>
-            <div class="row">
-              <a href="#" class="col-6 text-white">ข้อมูลราคาหลักทรัพย์</a>
-              <a href="#" class="col-6 text-white">สอบถามข้อมูลนักลงทุน</a>
-            </div>
-            <div class="row">
-              <a href="#" class="col-6 text-white">ข้อมูลผู้ถือหุ้น</a>
-              <a target="_blank" href="https://www.set.or.th/th/market/product/stock/quote/FN/news" class="col-6 text-white">ข่าวแจ้งตลาดหลักทรัพย์</a>
-            </div>
-          </div>
-          <h2 class="text-white">FN PRODUCT & SERVICE</h2>
-          <h2 class="text-white">BRANCH</h2>
-          <h2 class="text-white">FN ONLINE</h2>
+          <h2 class="text-white">PRODUCT</h2>
+          <h2 class="text-white">SERVICES</h2>
+          <h2 class="text-white">SOLAR BUSINESS</h2>
+          <h2 class="text-white">PRESS</h2>
+          <h2 class="text-white">CONTACT US</h2>
+          <h2 class="text-white">CAREER</h2>
+          <h2 class="text-white">FREE SITE SURVEY</h2>
         </nav>
-      </div>
-      <div class="d-lg-flex">
-        <div class="search-wrapper">
-          <input type="text" placeholder="SEARCH">
-        </div>
-        <div class="d-flex mt-2 mt-lg-0">
-          <button class="mx-lg-2">TH</button>
-          <button class="ms-2 ms-lg-0">EN</button>
-        </div>
       </div>
     </div>
   </nav>
@@ -69,7 +39,7 @@ export default defineComponent({
       if( this.isShow ){
         return 0
       } else{
-        return this.$refs.menu.offsetWidth
+        return this.$refs.submenu.offsetWidth
       }
       
     },
@@ -78,7 +48,7 @@ export default defineComponent({
     //this.width = this.$refs.menu.offsetWidth
     //console.log(this.$refs.submenu.offsetWidth)
     //this.$emit('submenuWidth', this.$refs.submenu.offsetWidth)
-    //this.loading = false
+    this.loading = false
   },
 
 })
@@ -112,7 +82,7 @@ export default defineComponent({
   transition: all .8s ease;
   @media (max-width: 576px) {
     //width: calc( 50% + 60px );
-    width: 100vw;
+    width: 80vw;
     overflow: hidden;
   }
   .main{
@@ -138,7 +108,6 @@ export default defineComponent({
 
 .hidden-menu{
   padding: 45px 30px;
-  border-right: 1px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

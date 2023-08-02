@@ -117,7 +117,8 @@
             <div class="layer"></div>
           </div>
         </div> 
-        <img src="/menu.jpg" class="img-fluid menu" @click="isOpen=!isOpen"/>
+        <img src="/menu.jpg" class="img-fluid menu" @click="isOpen=!isOpen" v-if="!isOpen"/>
+        <img src="/close.svg" class="img-fluid menu close-img" @click="isOpen=!isOpen" v-else/>
       </div>
     </div>
     <sidenav ref="sidenav" @submenuWidth="getWidth" :isShow="isOpen"/>
@@ -134,7 +135,7 @@ export default defineComponent({
     return {
       isHovered: false,
       left: '0',
-      isChecked: this.$i18n.locale=='en' ? true : false
+      isChecked: this.$i18n.locale=='en' ? true : false,
       isOpen: false,
     }
       
@@ -207,6 +208,10 @@ export default defineComponent({
     width: 30px;
     margin-top: 5px;
   }
+
+  .close-img{
+    height: 15px;
+  }
   .search{
     margin-top: 5px;
   }
@@ -220,6 +225,9 @@ export default defineComponent({
       margin: 0 15px;
       color: #666666;
       white-space: nowrap;
+      @media (max-width: 1200px) {
+        margin: 0 10px;
+      }
     }
   }
 }
