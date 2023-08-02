@@ -26,14 +26,16 @@
     <div class="container">
       <div class="related-products">
         <div :class="(index === 0 || index === 5) ? 'big':''" class="product-thumbnail" v-for="(item, index) in items" :key="index">
-          <button>
-            <img src="/icon-next.png" class="img-fluid" />
-          </button>
+          <nuxt-link :to="localePath('/Product/detail')">
+            <button>
+              <img src="/icon-next.png" class="img-fluid" />
+            </button>
+          </nuxt-link>
           <div class="text p-3">
             <h3 class="font-24">AC003</h3>
             <p>WALLBOX COMMERCIAL AC EV CHARGER</p>
           </div>
-          <img :src="item" class="img-fluid" />
+          <img :src="item" class="img-fluid zoom" />
         </div>
       </div>
       <div class="pagination mt-5">
@@ -254,6 +256,15 @@ export default defineComponent({
       border-radius: 30px;
     }
   }
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 </style>
