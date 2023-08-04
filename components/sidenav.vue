@@ -7,8 +7,9 @@
           <nuxt-link :to="localePath('about')"><h2 class="text-white">{{ $t('nav.aboutus') }}</h2></nuxt-link>
           <nuxt-link :to="localePath('Product')"><h2 class="text-white">{{ $t('nav.product') }}</h2></nuxt-link>
           <nuxt-link :to="localePath('Service')"><h2 class="text-white">{{ $t('nav.service') }}</h2></nuxt-link>
-          <h2 class="text-white">SOLAR BUSINESS</h2>
+          <h2 class="text-white">SOLAR BUSINESS ENABLER</h2>
           <nuxt-link :to="localePath('News')"><h2 class="text-white">{{ $t('nav.press') }}</h2></nuxt-link>
+          <nuxt-link :to="localePath('success')"><h2 class="text-white">SUCCESS STORY</h2></nuxt-link>
           <nuxt-link :to="localePath('contact')"><h2 class="text-white">CONTACT US</h2></nuxt-link>
           <nuxt-link :to="localePath('career')"><h2 class="text-white">CAREER</h2></nuxt-link>
           <h2 class="text-white">FREE SITE SURVEY</h2>
