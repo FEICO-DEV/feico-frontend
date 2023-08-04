@@ -104,7 +104,7 @@
             </div>
           </div>
           <nuxt-link :to="localePath('Service')">{{ $t('nav.service') }}</nuxt-link>
-          <a href="#">SOLAR BUSINESS ENABLER </a>
+          <a href="#">FEICO ACADEMY</a>
           <nuxt-link :to="localePath('News')">{{ $t('nav.press') }}</nuxt-link>
         </nav>
       </div>

@@ -7,12 +7,11 @@
           <nuxt-link :to="localePath('about')"><h4 class="text-white">{{ $t('nav.aboutus') }}</h4></nuxt-link>
           <nuxt-link :to="localePath('Product')"><h4 class="text-white">{{ $t('nav.product') }}</h4></nuxt-link>
           <nuxt-link :to="localePath('Service')"><h4 class="text-white">{{ $t('nav.service') }}</h4></nuxt-link>
-          <h4 class="text-white">SOLAR BUSINESS ENABLER</h4>
+          <h4 class="text-white">FEICO ACADEMY</h4>
           <nuxt-link :to="localePath('News')"><h4 class="text-white">{{ $t('nav.press') }}</h4></nuxt-link>
           <nuxt-link :to="localePath('success')"><h4 class="text-white">SUCCESS STORY</h4></nuxt-link>
           <nuxt-link :to="localePath('contact')"><h4 class="text-white">CONTACT US</h4></nuxt-link>
           <nuxt-link :to="localePath('career')"><h4 class="text-white">CAREER</h4></nuxt-link>
-          <h4 class="text-white">FREE SITE SURVEY</h4>
         </nav>
       </div>
     </div>
