@@ -157,8 +157,8 @@
     <div class="container py-4">
       <div class="row">
         <div class="col-lg-6 px-5 px-lg-0">
-          <h2 style="color:#000000">Huawei Digital Power: Your Best Partner for a Better, Greener Future</h2>
-          <p class="mt-lg-5 mt-3 mb-5 text-primary">By December 31, 2021<br>Digital Power has helped customers</p>
+          <h2 style="color:#000000">Huawei Digital Power: Your Best Partner <br>for a Better, Greener Future</h2>
+          
         </div>
         <div class="col-lg-6 px-5 px-lg-0">
           <div class="hp-3-icon">

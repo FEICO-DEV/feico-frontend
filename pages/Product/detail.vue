@@ -10,12 +10,12 @@
         <img src="/product-main.png" class="img-fluid" />
       </div>
       <div class="main-product-detail">
-        <div class="tag">
+        <!--<div class="tag">
           <button>Home</button>
           <button>Energy Storage Products</button>
           <button>Residential</button>
           <button>LUNA-2000-15-S0</button>
-        </div>
+        </div>-->
         <h2 class="mt-4"><strong>LUNA-2000-15-S0</strong></h2>
         <div class="list" v-for="(item, index) in list" :key="index">
           <div class="label">{{ item.label }}</div>
