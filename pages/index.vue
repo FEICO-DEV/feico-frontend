@@ -410,6 +410,12 @@ export default defineComponent({
       transform: translate(-50%,-50%);
       max-width: 500px;
     }
+    @media (max-width: 578px) {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      max-width: 500px;
+    }
     h1{
       color: #fff;
       font-size: 8em;
@@ -419,6 +425,9 @@ export default defineComponent({
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       @media (max-width: 992px) {
         font-size: 40px;
+      }
+      @media (max-width: 578px) {
+        font-size: 38px;
       }
     }
   }
