@@ -203,6 +203,11 @@ export default defineComponent({
   }
   .main-nav{
     margin: 10px 15px 0;
+    nav a{
+      &:hover, &:active, &:focus{
+        font-weight: bold;
+      }
+    }
   }
   .menu{
     width: 30px;
@@ -220,7 +225,7 @@ export default defineComponent({
     margin: 0 -15px;
     a{
       text-transform: uppercase;
-      font-weight: bold;
+      //font-weight: bold;
       text-decoration: none;
       margin: 0 15px;
       color: #666666;
